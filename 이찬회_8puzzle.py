@@ -6,12 +6,12 @@ from copy import deepcopy
 
 def bfs():  # 너비 우선 탐색 - 완전탐색이므로 최적해를 구한다
     print("목표 상태를 입력하세요.\n예시\n1 2 3\n4 5 6\n7 8 0")
-    goal = []
+    goal = []  # 1차원 배열로 저장
     for i in range(3):
         goal += input().split()
 
     print("처음 상태를 입력하세요.")
-    board = []
+    board = []  # 1차원 배열로 저장
     for i in range(3):
         board += input().split()
 
@@ -51,9 +51,13 @@ def h(board, goal):  # 휴리스틱 함수 -> 목표와 다른 칸의 개수를 
 def dfs(visit, now, goal, blank, cnt):  # 깊이 우선 탐색 dfs(방문체크, 현재상태, 목표상태, 0의 위치, 현재까지의 비용)
     if now == goal:
         print(f"최소 이동 횟수 : {cnt}")
+
+    if cnt > 2987:  # 스택오버플로우 한계 - 최대 깊이를 탐색해도 정답이 없으면
+        print("도달할 수 없는 목표입니다.")
         exit(0)
+
     hq = []
-    for dir in [1, -1, 3, -3]:
+    for dir in [1, -1, 3, -3]:  # 우, 좌, 하, 상
         nBlank = blank + dir
 
         if 0 <= nBlank < 9:
@@ -75,12 +79,12 @@ def dfs(visit, now, goal, blank, cnt):  # 깊이 우선 탐색 dfs(방문체크,
 def aStar():  # A* 알고리즘
     sys.setrecursionlimit(10 ** 7)
     print("목표 상태를 입력하세요.\n예시\n1 2 3\n4 5 6\n7 8 0")
-    goal = []
+    goal = []  # 1차원 배열로 저장
     for i in range(3):
         goal += input().split()
 
     print("처음 상태를 입력하세요.")
-    board = []
+    board = []  # 1차원 배열로 저장
     for i in range(3):
         board += input().split()
 
@@ -91,7 +95,7 @@ def aStar():  # A* 알고리즘
     print("도달할 수 없는 목표입니다.")
 
 
-print("최적해를 구하는 BFS알고리즘 : 0입력\n 근사해를 구하는 A*알고리즘 : 1입력")
+print("최적해를 구하는 BFS알고리즘 : 0입력\n근사해를 구하는 A*알고리즘 : 1입력")
 mode = int(input())
 
 if(mode == 0):
