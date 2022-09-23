@@ -3,7 +3,7 @@ def go(turn):
     if test(3 - turn):  # 3 - turn은 상대방을 의미한다
         return [0, 1, 0]
 
-    result = [0, 0, 0]  # [비김, 이김, 짐, 총 탐색 횟수]
+    result = [0, 0, 0]  # [이김, 짐, 총 탐색 횟수]
     for y in range(3):
         for x in range(3):
             if board[y][x] == 0:
