@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="myBtn" name="myname" value="My Button">
+    <p>Click the buttons below to display and/or change the value of the name 
+            attribute of the input button above. Also value attribute</p>
+    <button onclick="display()">Display name</button>
+    <button onclick="change()">Change name</button>
+
+    <hr/>
+    Favorite car:
+    <input type="button" id="myBtn1" value="Volvo">    
+    <p>Click the button below to change the text displayed on the input button above.</p>    
+    <button onclick="myFunction()">Try it</button>
+    
+    <script>
+        function display() {
+            var x = document.getElementById("myBtn").name;
+            alert("The name of the input button is: " + x);
+            var x = document.getElementById("myBtn").value;
+            alert("The value of the input button is: " + x);
+        }    
+        function change() {
+            var x = document.getElementById("myBtn").name = "newButtonName";
+            var x = document.getElementById("myBtn").value = "newButtonName";
+            alert ("The name and button text was changed to: " + x);
+        }
+
+        function myFunction() {
+            document.getElementById("myBtn1").value = "BMW";
+        }
+    </script>
+                
+</body>
+</html>

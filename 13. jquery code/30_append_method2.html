@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            // .image의 크기를 조정합니다.
+            // $('img') => <img> 객체 3개를 return
+            $('img').css('width', 250);
+
+            // 함수를 2초마다 실행합니다.
+            // 2000 => 2000 milisecond => 2초
+            setInterval(function () {
+                // 첫 번째 이미지를 마지막으로 보냅니다.
+                // first() => <img>객체 3개중에 첫번째를 선택
+                // append를 할 객체가 이미 html에 존재하면, jquery는 
+                // 기존 위치에 있는객체는 삭제하도 새로 변경되는 위치에 추가(이동)
+                $('img').first().appendTo('body');
+            }, 2000);
+        });
+    </script>
+</head>
+<body>
+   
+    
+    
+    <img src="first.jpg" />
+    <img src="petit.jpg" />
+    <img src="watch.jpg" />
+</body>
+</html>

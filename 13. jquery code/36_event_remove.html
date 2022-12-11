@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            margin: 5px; padding: 5px;
+            border: 3px solid black;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('a').click(function (event) {
+                $(this).css('background-color', 'blue');
+                // stopPropagation : event 전달하는 것을 stop 
+                // =>  <a>e tag에 click등 발생된 event를 다른 객체에 전달하는 것을 
+                //    stop하겠다는 의미 (bubbling등 기준에 의해서 부모 tag에 
+                //    event가 발생하는 것을 stop)
+                // event.stopPropagation();
+                // preventDefault : Default 처리 기준을 prevent(막는 것)
+                // event.preventDefault();
+
+                // false를 return하면 stopPropagation과 preventDefault 메소드를
+                // 동시에 실행하는 효과를 가짐
+                // return false;
+            });
+
+            $('h1').click(function () {
+                $(this).css('background-color', 'red');
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>
+        <a href="http://hanb.co.kr">Hanb Media</a>
+    </h1>
+</body>
+</html>

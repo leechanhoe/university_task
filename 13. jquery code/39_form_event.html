@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            // submit event 발생 시점 : submit button을 click하면 발생
+            $('#my-form').submit(function (event) {
+                // 입력 양식의 value를 가져옵니다.
+                var name = $('#name').val();
+                var password = $('#password').val();
+
+                // 출력합니다.
+                alert(name + ' : ' + password);
+
+                // 기본 이벤트를 제거합니다.
+                // submit 버튼 click시 web server로 데이터 전송하는 기본 명령어를
+                // 막는다 <= preventDefault
+                event.preventDefault();
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="my-form">
+        <table>
+            <tr>
+                <td>이름: </td>
+                <td><input type="text" name="name" id="name" /></td>
+            </tr>
+            <tr>
+                <td>비밀번호: </td>
+                <td><input type="password" name="password" id="password" /></td>
+            </tr>
+        </table>
+        <!-- submit button -->
+        <!-- submit button을 click하면 기본적으로 web server
+            (예를 들면, node.js web server program 전달)로 전송 -->
+        <input type="submit" value="제출" />
+    </form>
+</body>
+</html>

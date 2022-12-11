@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .reverse {
+            background: black;
+            color: white;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 이벤트를 연결합니다.
+            // $('h1') => 3개의 h1 객체를 return
+            // hover(fun1(), func2()) 
+            // => func1()은 mouseenter event가 발생할 때 실행
+            // => func2()은 mouseleave event가 발생할 때 실행
+            $('h1').hover(function () {
+                // $(this) => clik event가 발생한 h1 객체
+                $(this).addClass('reverse');
+            }, function () {
+                $(this).removeClass('reverse');
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Header-0</h1>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+</body>
+</html>

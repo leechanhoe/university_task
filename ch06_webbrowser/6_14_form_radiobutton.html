@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        What color do you prefer?<br>
+        <input type="radio" name="colors" id="red">Red<br>
+        <input type="radio" name="colors" id="blue">Blue
+    </form>    
+    <button onclick="check()">Check "Red"</button>
+    <button onclick="uncheck()">Uncheck "Red"</button>
+
+    <hr/>
+
+    <form>
+        First Name: <input type="text" id="fname" value="Donald">
+        Convert to upper case
+        <input type="radio" onclick="if(this.checked){myFunction()}">
+    </form>
+
+    <script>
+        function check() {
+          document.getElementById("red").checked = true;
+        }
+        function uncheck() {
+          document.getElementById("red").checked = false;
+        }
+        function myFunction() {
+            document.getElementById("fname").value = 
+                        document.getElementById("fname").value.toUpperCase();
+        }    
+    </script>    
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 변수를 선언합니다.
+            // $('h1').text() => h1 객체 3개의 모든 text를 가져옴
+            var text = $('h1').text();
+            // 출력합니다.
+            alert(text);
+
+            // text()메소드에 tag를 인자값으로 넣어도 tag로 인식을 않함.
+            $('div').text('<h1>$().html() Method</h1>');
+        });
+    </script>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <h1>Header-0</h1>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+</body>
+</html>

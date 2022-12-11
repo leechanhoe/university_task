@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Finding HTML Elements Using document.links</h2>
+
+    <p>
+    <a href="/html/default.asp">HTML</a>
+    <br>
+    <a href="/css/default.asp">CSS</a>
+    </p>
+    
+    <p id="demo"></p>
+    
+    <script>
+        document.getElementById("demo").innerHTML =
+                "Number of links: " + document.links.length;
+    </script>    
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        // $(document).ready(function () {
+        //     $('h1').first().remove();
+        // });
+        $(document).ready(function () {
+            // empty() => 자식, 후손 객체들을 삭제 (본인은 삭제가 안됨)
+            // remove() => 본인을 포함하여, 자식, 후손객체 모두 삭제
+            $('div').empty();
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Header-0</h1>
+        <h1>Header-1</h1>
+    </div>
+</body>
+</html>

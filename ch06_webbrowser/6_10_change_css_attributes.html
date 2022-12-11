@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 예제 1. <img> tag의 src attribute값을 변경-->
+    <h2>JavaScript HTML DOM</h2>
+    <img id="image" src="images/smiley.gif" width="160" height="120">
+    <p id="demo"></p>
+
+    <hr/>
+
+    <!-- p tag 내용을 web browser화면에서 보여지게 하거나, 사라지게 하는 동작 시연 -->
+    <p id="p1">
+        This is a text.
+        This is a text.
+        This is a text.
+        This is a text.
+    </p>
+    <input type="button" value="Hide text" 
+        onclick="document.getElementById('p1').style.visibility='hidden'">
+    <input type="button" value="Show text" 
+        onclick="document.getElementById('p1').style.visibility='visible'">
+    
+    <script>
+        document.getElementById("image").src = "images/landscape.jpg";
+        document.getElementById("demo").innerHTML = "Date : " + Date();
+    </script>
+    
+    <p>The original image was smiley.gif, but the script changed it to landscape.jpg</p>
+        
+</body>
+</html>

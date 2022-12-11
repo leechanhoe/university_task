@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            // change event 발생시점 : checkbox인 경우 unchecked된 상태애소
+            // checked 된 상태로 변환되거나, checked => unchecked로 상태 변경
+            $('#all-check').change(function () {
+                // this : id가 all-check인 객체
+                if (this.checked) {
+                    // children() => div객체의 자식들을 다 가져옴
+                    // prop method : 객체의 property(속성)값을 변경할 때 사용
+                    // checked : checkbox의 속성 이름
+                    $('#check-item').children().prop('checked', true);
+                } else {
+                    $('#check-item').children().prop('checked', false);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="checkbox" id="all-check" />
+    <label for="all-check">All</label>
+    <div id="check-item">
+        <input type="checkbox" />
+        <label>A Option</label>
+        <input type="checkbox" />
+        <label>B Option</label>
+        <input type="checkbox" />
+        <label>C Option</label>
+    </div>
+</body>
+</html>

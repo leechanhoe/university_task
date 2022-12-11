@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            // child selector
+            // $('div > *').css('color', 'red');
+            // all descendent(자식, 손자 등 모든 후손을 선택) selector
+            $('div *').css('color', 'red');
+
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Apple</li>
+            <li>Bag</li>
+            <li>Cat</li>
+            <li>Dog</li>
+            <li>Elephant</li>
+        </ul>
+        <p>this is paragraph</p>
+    </div>
+</body>
+</html>

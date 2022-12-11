@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            // $('<h1></h1>').html('Hello World .. !').appendTo('body');
+
+            $('<h1>Hello World .. !</h1>').appendTo('body');
+
+            // $('<img />').attr('src', 'first.jpg').appendTo('body');
+
+            $('<img />', {
+                src: 'first.jpg',
+                width: 350,
+                height: 250
+            }).appendTo('body');
+
+            
+            // 변수를 선언합니다.
+            var h1 = '<h1>Header1</h1>';
+            var h2 = '<h2>Header2</h2>';
+
+            // 문서 객체를 추가합니다.
+            $('body').append(h1, h2, h1, h2);
+
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

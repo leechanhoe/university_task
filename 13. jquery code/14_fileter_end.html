@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            // $('h1').css('background', 'orange');
+            // $('h1:even').css('color', 'white');
+            // $('h1:odd').css('color', 'red');
+
+            // end() 사용
+            // $('h1') => h1 object 3개 선택
+            // filter(':even') => h1 object 3개 중에서 짝수번째인 2개 h1 object선택
+            // end() : filter 효과를 제거해서 원래 객체 3개를 선택
+            // filter(':odd') => 3개 중에서 홀수 번째 객체 1개를 선택
+            $('h1').css('background', 'orange').filter(':even').
+                css('color', 'white').end().filter(':odd').css('color', 'red');
+        });
+    </script>
+</head>
+<body>
+    <h1>Header-0</h1>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+</body>
+</html>

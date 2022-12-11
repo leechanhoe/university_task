@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- jQuery library를 download받아서 사용하는 방식 -->
+    <script src="jquery-3.1.1.js"></script>
+    <script>
+
+        // onload : web browser의 html의 모든 tag를 javascript object로 변환한 후에
+        //          window에 모든 tag를 화면에 display하기 전에 발생하는 event
+        // window.onload = function () {
+        // };
+        // $(document).ready()는 window.onload와 동일한 기능
+        
+        // $(document) => javascript object
+        // ready => $(document) object의 method
+        // javascript에서는 1개의 event에 대하여 여러개의 함수를 등록 가능
+        $(document).ready(function () {
+            alert('First READY');
+        });
+        $(document).ready(function () {
+            alert('Second READY');
+        });
+        $(document).ready(function () {
+            alert('Third READY');
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            // $('h3:even').css({
+            //     backgroundColor: 'black',
+            //     color: 'white'
+            // });
+            // $('h3') => 6개의 h3 object를 array 형태로 return
+            // filter(':even') => 6개의 h3 object들 중에서 짝수번째 h3 object 3개 선택
+            // $('h3').filter(':even').css({
+            //     backgroundColor: 'black',
+            //     color: 'white'
+            // });
+
+            // filter 안에 함수를 지정
+            $('h3').filter(function (index) {
+                // index % 3 == 0 => 3의 배수이면 true
+                return index % 3 == 0;
+            }).css({
+                backgroundColor: 'black',
+                color: 'white'
+            });
+
+            $('h1').css('background', 'orange').filter(':even').css('color', 'red');
+        });
+    </script>
+</head>
+<body>
+    <h3>Header-0</h3>
+    <h3>Header-1</h3>
+    <h3>Header-2</h3>
+    <h3>Header-3</h3>
+    <h3>Header-4</h3>
+    <h3>Header-5</h3>
+
+    <h1>Header-0</h1>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+</body>
+</html>
